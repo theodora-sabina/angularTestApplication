@@ -1,0 +1,4 @@
+am modificat in ng2-youtube-player/src/modules/youtube-player.component.d.ts - linia 18 in loc de EventEmitter<YT.PlayerEvent> cu EventEmitter<YT.PlayerState>
+
+
+am modificat import { ReplaySubject } from 'rxjs/ReplaySubject'; cu import { ReplaySubject } from 'rxjs'; in youtube-player.service.d.ts 

@@ -1,0 +1,27 @@
+<div class='card' *ngIf='vinyl'>
+  <div class='card-header'>
+    {{pageTitle }} - {{vinyl.vinylRecord}}
+  </div>
+</div>
+
+<p>
+  <img src="{{vinyl.imageURL}}" style='width: 400px;'>
+</p>
+<div class='class-footer' >
+  <button (click)='onBack()' style='width:80px;' class='btn btn-outline-secondary'>
+<i class='fa fa-chevron-left'>Back</i>
+  </button>
+</div>
+<br />
+
+
+<!-- <p>
+
+       Khruangbin - The Universe Smiles Upon You"
+  </p>
+  <youtube-player
+      [videoId]="id"
+      (ready)="savePlayer($event)"
+      (change)="onStateChange($event)"
+    ></youtube-player>
+</div>   -->

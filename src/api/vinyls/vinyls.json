@@ -1,0 +1,32 @@
+[ 
+    {  
+       "vinylId":1,
+       "vinylRecord":"Live in Paris 1960",
+       "vinylArtist":"Miles Davis/John Coltrane",
+       "vinylCategory":"Clasics",
+       "releaseDate":"March, 2018",
+       "price":27.99,
+       "imageURL":"https://www.treblezine.com/wp-content/uploads/2014/09/daviscoltrane.jpg",
+       "starRating":4.8
+    },
+    {  
+       "vinylId":2,
+       "vinylRecord":"Journey in Satchidananda",
+       "vinylArtist":"Alice Coltrane",
+       "vinylCategory":"Jazz",
+       "releaseDate":"March, 2018",
+       "price":22.99,
+       "imageURL":"https://images-na.ssl-images-amazon.com/images/I/51TPHB5oOEL.jpg",
+       "starRating":4
+    },
+    {  
+       "vinylId":3,
+       "vinylRecord":"The Universe Smiles Upon You",
+       "vinylArtist":"Khruangbin",
+       "vinylCategory":"Psychedelic, Funk",
+       "releaseDate":"June, 2017",
+       "price":23.99,
+       "imageURL":"https://img.discogs.com/sXkvzLl39Y-APDFCE2j1FAFfChY=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8149748-1457110415-4454.jpeg.jpg",
+       "starRating":3.8
+    }
+]

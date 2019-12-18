@@ -1,0 +1,70 @@
+<div class="card">
+  <div class="card-header">
+      {{pageTitle}}
+  </div>
+  <div class='card-body'>
+      <div class='row'>
+          <div class='col-md-2'>Filter by:</div>
+          <div class='col-md-4'>
+              <input type='text'
+              [(ngModel)] = 'listFilter' /> <!--leg de prop componentei--> 
+          </div>
+      </div>
+      <!-- <div class='row'>
+          <div class='col-md-6'>
+              <h4>Filter by: </h4>
+          </div>
+      </div>-->
+  </div>
+
+  <div class='table responsive'>
+      <table class='table' *ngIf='vinyls && vinyls.length'>
+          <thead>
+              <tr>
+                  <th>
+                      <button class='btn btn-primary'
+                      (click) = 'toggleImage()'>
+                      {{showImage ? 'Hide' : 'Show'}} Image</button>
+                  </th>
+                  <th>Record</th>
+                  <th>Artist</th>
+                  <th>Category</th>
+                  <th>Release Date</th>
+                  <th>Price</th>
+                  <th>Rating</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor='let vinyl of filteredVinyls'>
+                  <td>
+                      <img *ngIf = 'showImage'
+                          [src] = 'vinyl.imageURL' 
+                          [title] ='vinyl.vinylRecord' 
+                          [style.width.px] ='imageWidth'
+                          [style.margin.px] = 'imageMargin'
+                          [style.height.px] = 'imageHeight'
+                      >
+                  </td>
+                  <td>
+                      <a [routerLink] = "['/vinyls', vinyl.vinylId]">
+                    {{vinyl.vinylRecord}}
+                    </a>
+                  </td>
+                  <td>{{vinyl.vinylArtist}}</td>
+                  <td>{{vinyl.vinylCategory}}</td>
+                  <td>{{vinyl.releaseDate}}</td>
+                  <td>{{vinyl.price | currency: 'USD':'symbol':'1.2-2' }}</td>
+                 <!-- <td>{{vinyl.starRating}}</td>  inlocuiesc cu selectorul pentru directiva starComponent-->
+                  <td><pm-star [rating] = 'vinyl.starRating'
+                               (ratingClicked) = 'onRatingClicked($event)' >
+        
+                  </pm-star></td> <!--trebuie sa ii spun unde sa gaseasca directiva-->
+              </tr>
+
+          </tbody>
+      </table>
+
+
+  </div>
+
+</div>
